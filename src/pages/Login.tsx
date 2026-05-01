@@ -1,5 +1,5 @@
 import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { AnimatedPage } from '../components/AnimatedPage';
 
 const Login = () => {
@@ -9,7 +9,7 @@ const Login = () => {
     const handleLogin = () => {
         login();
         //redirect to admin after login
-        navigate('/admin');
+        Navigate('/admin');
     };
 
     return (
