@@ -1,75 +1,80 @@
-# React + TypeScript + Vite
+# Component Creation and Props
+Dynamic Routing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## React Compiler
+## Overview
+Scenario
+You are tasked with building a small but feature-rich blog application. This will require you to implement a core feature of modern web applications: dynamic routing. You’ll create a system where a list of blog posts links to individual, dynamically generated pages for each post.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Furthermore, you will implement a basic authentication system and create a “protected” admin area that is only accessible to logged-in users, a common requirement in real-world applications.
 
-Note: This will impact Vite dev & build performances.
+This lab will give you hands-on experience with React Router and handling URL parameters.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### The challenge
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Implement dynamic routes in React Router to generate pages from data.
+- Create a main “index” page that links to multiple dynamic detail pages.
+- Read and use route parameters (slugs or IDs) to fetch and display data for a specific page.
+- Structure a basic client-side authentication system using React Context.
+- Create a protected route that redirects unauthenticated users.
+- Conditionally render UI elements based on the user’s authentication status.
+- (Bonus) Implement simple animated page transitions.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Links
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Assignment URL: https://ps-lms.vercel.app/curriculum/se/416/lab-4
+- Github URL: https://github.com/traceynicole71-cloud/Lab-10.4-Dynamic-Routing-Personal-Blog
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## My process
+ My process was to develop code by following the activity tasks step-by-step. I then took it a step further to ask AI to help me make corrections that I could not identify at the end of coding. 
+
+
+### Built with
+- React
+- CSS
+- Typescript
+- Tailwind
+
+
+### What I learned
+
+I learned how to use a plethora of React methods to produce a clean App--specifically slug, Framer Motion,  and react-router-dom, thinking of them as the brain-skelton-skin of the project gave me a better perspective of how they interact and (in turn) made it easier to adapt and adopt the methods. I also learned that I have to be careful when downloading tailwind and configuring in projects.  I asked co-pilot to configure tailwind for me, and it downloaded the wrong version and that created a whole problem with my color theme. 
+
+### Continued development
+
+Continued development for me is to still pay attention to importing and exporting that links each code file to the appropriate others. I also want to continue to develop in my usage of Tailwind.
+
+### Useful resources
+
+- [Fullstack Advanced Youtube] https://www.youtube.com/watch?v=AA8RP0z_CYY
+- [Dave Gray Youtube Dynamic File-Based Routing in React Tutorial] https://www.youtube.com/watch?v=FUpvQQzBJmU
+- [Kalman Web Design Create Dynamic Navigation in React with React Router DOM Youtube Tutorial] ?
+- Jeffrey Leak, Computer Scientist and Senior Software Engineer V
+
+
+### AI Collaboration
+
+I the Github co-pilot to make sure my Typescript files were configured correctly, and to help me insert athe sun and moon emoji in the app. I also used it to help find error at the end of coding when  I couldn't find the error that was preventing the theme colors from populating. I used Google Gemini to provide the code to create the pink, green, and gray heme for the card; however, in this lab i asked co-pilot to configure Tailwind and it downloaded an old version and my colors didn't populate correctly.
+
+## Acknowledgments
+
+Thank you to Jeffrey Leak for helping me to make senses of React concepts and methods.
+
